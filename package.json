@@ -1,5 +1,5 @@
 {
-  "$schema": "../../Tools/Schemas/schema.package.json",
+  "$schema": "../../Tools/Schemas/schema.package.jsoxn",
   "name": "ng-cli-pokemon-app",
   "version": "0.0.0",
   "scripts": {
