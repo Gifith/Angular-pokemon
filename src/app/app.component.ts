@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+
+import { Pokemon } from './pokemon';
+import { POKEMONS } from './mock-pokemons';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-cli-pokemon-app';
+  title = 'Liste de pokémons';
+
+  private pokemons: Pokemon[];
+
+  ngOnInit() {
+    this.pokemons = POKEMONS;
+  }
+
+  selectPokemon(pokemon: Pokemon) {
+    alert('Vous avez cliqué sur ' + pokemon.name);
+  }
 }
