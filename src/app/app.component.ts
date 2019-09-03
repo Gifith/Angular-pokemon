@@ -9,10 +9,9 @@ import { POKEMONS } from './mock-pokemons';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'Liste de pokémons';
-
-  private pokemons: Pokemon[];
+export class AppComponent implements OnInit {
+  title = 'Liste des pokémons';
+  pokemons: Pokemon[];
 
   ngOnInit() {
     this.pokemons = POKEMONS;
