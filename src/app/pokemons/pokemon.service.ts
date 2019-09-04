@@ -11,12 +11,14 @@ export class PokemonsService {
 
   // Retourne le pokémon avec l'identifiant passé en paramètre
   getPokemon(id: number): Pokemon {
-    const pokemons = this.getPokemons();
-
-    for (const pokemon of pokemons) {
+    for (const pokemon of this.getPokemons()) {
       if (id === pokemon.id) {
         return pokemon;
       }
     }
+  }
+
+  getPokemonTypes(): string[] {
+    return ['Plante', 'Feu', 'Eau', 'Insecte', 'Normal', 'Electrik', 'Poison', 'Fée', 'Vol'];
   }
 }
